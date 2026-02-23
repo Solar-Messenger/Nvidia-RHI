@@ -89,7 +89,7 @@ Result DescriptorD3D11::Create(const Texture1DViewDesc& textureViewDesc) {
             hr = m_Device->CreateDepthStencilView(textureD3D11, &desc, (ID3D11DepthStencilView**)&m_Descriptor);
         } break;
         default:
-            NRI_CHECK(false, "Unexpected");
+            NRI_CHECK(false, "Unexpected 'textureViewDesc.viewType'");
             return Result::INVALID_ARGUMENT;
     }
 
@@ -233,7 +233,7 @@ Result DescriptorD3D11::Create(const Texture2DViewDesc& textureViewDesc) {
 
         } break;
         default:
-            NRI_CHECK(false, "Unexpected");
+            NRI_CHECK(false, "Unexpected 'textureViewDesc.viewType'");
             return Result::INVALID_ARGUMENT;
     }
 
@@ -285,7 +285,7 @@ Result DescriptorD3D11::Create(const Texture3DViewDesc& textureViewDesc) {
             hr = m_Device->CreateRenderTargetView(textureD3D11, &desc, (ID3D11RenderTargetView**)&m_Descriptor);
         } break;
         default:
-            NRI_CHECK(false, "Unexpected");
+            NRI_CHECK(false, "Unexpected 'textureViewDesc.viewType'");
             return Result::INVALID_ARGUMENT;
     }
 
@@ -361,7 +361,7 @@ Result DescriptorD3D11::Create(const BufferViewDesc& bufferViewDesc) {
             hr = m_Device->CreateUnorderedAccessView(bufferD3D11, &desc, (ID3D11UnorderedAccessView**)&m_Descriptor);
         } break;
         default:
-            NRI_CHECK(false, "Unexpected");
+            NRI_CHECK(false, "Unexpected 'bufferViewDesc.viewType'");
             return Result::INVALID_ARGUMENT;
     };
 

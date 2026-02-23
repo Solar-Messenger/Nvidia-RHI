@@ -26,7 +26,7 @@ DescriptorVal::DescriptorVal(DeviceVal& device, Descriptor* descriptor, const Bu
             m_Type = DescriptorTypeExt::STORAGE_STRUCTURED_BUFFER;
             break;
         default:
-            NRI_CHECK(false, "unexpected 'bufferViewDesc.viewType'");
+            NRI_CHECK(false, "Unexpected 'bufferViewDesc.viewType'");
             break;
     }
 }
@@ -51,7 +51,7 @@ DescriptorVal::DescriptorVal(DeviceVal& device, Descriptor* descriptor, const Te
             m_IsStencilReadonly = (textureViewDesc.readonlyPlanes & PlaneBits::STENCIL) != 0;
             break;
         default:
-            NRI_CHECK(false, "unexpected 'textureViewDesc.viewType'");
+            NRI_CHECK(false, "Unexpected 'textureViewDesc.viewType'");
             break;
     }
 }
@@ -86,7 +86,7 @@ DescriptorVal::DescriptorVal(DeviceVal& device, Descriptor* descriptor, const Te
             m_Type = DescriptorTypeExt::SHADING_RATE_ATTACHMENT;
             break;
         default:
-            NRI_CHECK(false, "unexpected 'textureViewDesc.viewType'");
+            NRI_CHECK(false, "Unexpected 'textureViewDesc.viewType'");
             break;
     }
 }
@@ -104,7 +104,7 @@ DescriptorVal::DescriptorVal(DeviceVal& device, Descriptor* descriptor, const Te
             m_Type = DescriptorTypeExt::COLOR_ATTACHMENT;
             break;
         default:
-            NRI_CHECK(false, "unexpected 'textureViewDesc.viewType'");
+            NRI_CHECK(false, "Unexpected 'textureViewDesc.viewType'");
             break;
     }
 }

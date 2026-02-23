@@ -263,7 +263,7 @@ static inline FfxApiResource FfxGetResource(const CoreInterface& NRI, const Upsc
                 res.description.type = FFX_API_RESOURCE_TYPE_TEXTURE3D;
                 break;
             default:
-                NRI_CHECK(false, "Unexpected");
+                NRI_CHECK(false, "Unexpected 'textureDesc.type'");
                 break;
         }
     }

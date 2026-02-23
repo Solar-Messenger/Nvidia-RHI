@@ -2116,7 +2116,7 @@ NRI_INLINE void DeviceVK::UpdateDescriptorRanges(const UpdateDescriptorRangeDesc
                 scratchSize += sizeof(VkAccelerationStructureKHR) * updateDescriptorRangeDesc.descriptorNum + sizeof(VkWriteDescriptorSetAccelerationStructureKHR);
                 break;
             default:
-                NRI_CHECK(false, "Unexpected");
+                NRI_CHECK(false, "Unexpected 'descriptorType'");
                 break;
         }
     }

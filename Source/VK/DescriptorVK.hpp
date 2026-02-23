@@ -258,7 +258,7 @@ Result DescriptorVK::Create(const BufferViewDesc& bufferViewDesc) {
             m_Type = DescriptorType::CONSTANT_BUFFER;
             break;
         default:
-            NRI_CHECK(false, "unexpected 'bufferViewDesc.viewType'");
+            NRI_CHECK(false, "Unexpected 'bufferViewDesc.viewType'");
     }
 
     if (bufferViewDesc.viewType == BufferViewType::SHADER_RESOURCE || bufferViewDesc.viewType == BufferViewType::SHADER_RESOURCE_STORAGE)
